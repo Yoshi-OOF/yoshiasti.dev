@@ -1267,7 +1267,7 @@
                     }
                 </style>
                 <p>Computer science student at IUT de Laval, passionate about programming and software development. I
-                    specialize in <span class="highlight">Java</span>, <span class="highlight">Python</span>, <span
+                    specialize in <span class="highlight">Lua, </span><span class="highlight">Java</span>, <span class="highlight">Python</span>, <span
                         class="highlight">C</span>, and <span class="highlight">web development</span>.</p>
                 <div class="hero-btns">
                     <a href="#projects" class="btn">See my projects</a>
@@ -1463,7 +1463,8 @@
                     </div>
                     <div class="project-info">
                         <h3>DLL Injector</h3>
-                        <p>Developing a DLL injector in C++ for extending application functionalities.</p>
+                        <p>Developing a DLL injector in C++ for extending application functionalities. with the possibilities
+                            of injecting in Manual Mapping, LoadLibrary, delete PE header, stealth injection, hijack thread.</p>
                         <div class="project-tags">
                             <span class="project-tag">C++</span>
                             <span class="project-tag">Windows API</span>
@@ -2448,77 +2449,222 @@
             </div>
         </div>
     </section>
-    <section id="stage">
+
+        
+    <style>
+        #current-internship {
+            padding: 100px 0;
+            background-color: rgba(30, 30, 30, 0.5);
+        }
+        
+        .internship-showcase {
+            margin-top: 30px;
+        }
+        
+        .internship-card {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .internship-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .internship-header {
+            padding: 25px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .company-info {
+            display: flex;
+            align-items: center;
+        }
+        
+        .company-logo {
+            width: 80px;
+            height: 80px;
+            margin-right: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            padding: 10px;
+        }
+        
+        .company-logo img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        
+        .company-name h3 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+        
+        .internship-date {
+            color: var(--secondary);
+            font-size: 0.9rem;
+        }
+        
+        .internship-body {
+            padding: 25px;
+        }
+        
+        .internship-position h4 {
+            margin: 0 0 20px 0;
+            font-size: 1.3rem;
+            color: var(--text);
+        }
+        
+        .tech-stack {
+            margin-bottom: 20px;
+        }
+        
+        .tech-stack h5, .internship-achievements h5 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            color: var(--text);
+        }
+        
+        .tech-stack h5 i, .internship-achievements h5 i {
+            margin-right: 8px;
+            color: var(--primary);
+        }
+        
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .tech-tag {
+            background-color: rgba(74, 99, 231, 0.1);
+            color: var(--primary);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            transition: background-color 0.3s ease;
+        }
+        
+        .tech-tag:hover {
+            background-color: rgba(74, 99, 231, 0.2);
+        }
+        
+        .internship-description {
+            margin-bottom: 20px;
+            line-height: 1.6;
+            color: var(--text);
+            font-size: 1rem;
+        }
+        
+        .internship-achievements ul {
+            padding-left: 20px;
+            margin-bottom: 0;
+        }
+        
+        .internship-achievements li {
+            margin-bottom: 8px;
+            color: var(--text);
+        }
+        
+        .internship-footer {
+            padding: 15px 25px;
+            background-color: rgba(18, 18, 18, 0.5);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: right;
+        }
+        
+        .company-link {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+        }
+        
+        .company-link i {
+            margin-right: 8px;
+        }
+        
+        .company-link:hover {
+            color: var(--primary-dark);
+            transform: translateY(-3px);
+        }
+        
+        @media (max-width: 768px) {
+            .company-info {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .company-logo {
+                margin: 0 auto 15px;
+            }
+        }
+    </style>
+    <section id="current-internship" class="my-internship">
         <div class="container">
             <div class="section-title reveal">
-                <h2>Internship Search</h2>
+                <h2>Current Internship</h2>
             </div>
-            <div class="stage-content">
-                <div class="stage-text reveal">
-                    <h3>My Search Approach</h3>
-                    <p>As part of my studies, I am actively seeking an internship in software development. Here is my
-                        approach:</p>
-
-                    <div class="stage-steps">
-                        <div class="stage-step">
-                            <div class="step-icon"><i class="fas fa-file-alt"></i></div>
-                            <div class="step-text">Creating a CV tailored to the IT field</div>
-                        </div>
-                        <div class="stage-step">
-                            <div class="step-icon"><i class="fas fa-pen-fancy"></i></div>
-                            <div class="step-text">Writing a personalized cover letter</div>
-                        </div>
-                        <div class="stage-step">
-                            <div class="step-icon"><i class="fas fa-paper-plane"></i></div>
-                            <div class="step-text">Sending spontaneous applications to local companies</div>
-                        </div>
-                        <div class="stage-step">
-                            <div class="step-icon"><i class="fas fa-search"></i></div>
-                            <div class="step-text">Responding to published internship offers</div>
-                        </div>
-                        <div class="stage-step">
-                            <div class="step-icon"><i class="fas fa-users"></i></div>
-                            <div class="step-text">Proactive approach through local contacts</div>
-                        </div>
-                        <div class="stage-step">
-                            <div class="step-icon"><i class="fas fa-handshake"></i></div>
-                            <div class="step-text">Securing the internship through a personal network</div>
+            <div class="internship-showcase reveal">
+                <div class="internship-card">
+                    <div class="internship-header">
+                        <div class="company-info">
+                            <div class="company-logo">
+                                <img src="https://george-project.eu/wp-content/uploads/2023/06/logo_826x800_72dpi.png" alt="GEORGE Project Logo">
+                            </div>
+                            <div class="company-name">
+                                <h3>Development of API backends - ETL & scientific computing</h3>
+                                <span class="internship-date">2025 - April</span>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="stage-points reveal">
-                    <div class="points-container">
-                        <div class="points-column">
-                            <h4 class="points-title"><i class="fas fa-plus-circle"></i> Strengths</h4>
-                            <ul class="points-list">
-                                <li><i class="fas fa-check"></i> Developing professional network</li>
-                                <li><i class="fas fa-check"></i> Proactivity in the search</li>
-                                <li><i class="fas fa-check"></i> Attractive CV and online portfolio</li>
-                                <li><i class="fas fa-check"></i> Adaptability to different environments</li>
-                            </ul>
+                    <div class="internship-body">
+                        <div class="internship-position">
+                            <h4>Backend API Development - ETL & Scientific Computing</h4>
                         </div>
-                        <div class="points-column">
-                            <h4 class="points-title"><i class="fas fa-minus-circle"></i> Areas for Improvement</h4>
-                            <ul class="points-list">
-                                <li><i class="fas fa-times"></i> Limited professional experience</li>
-                                <li><i class="fas fa-times"></i> Reduced availability during the school year</li>
-                            </ul>
+                        <div class="internship-details">
+                            <div class="tech-stack">
+                                <h5><i class="fas fa-code"></i> Technologies</h5>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">API</span>
+                                    <span class="tech-tag">ETL</span>
+                                    <span class="tech-tag">Scientific Computing</span>
+                                    <span class="tech-tag">Backend</span>
+                                </div>
+                            </div>
+                            <div class="internship-description">
+                                <p>Development and optimization of backend APIs for scientific data processing. Implementation of ETL (Extract, Transform, Load) processes for complex data analysis.</p>
+                            </div>
+                            <div class="internship-achievements">
+                                <h5><i class="fas fa-trophy"></i> Achievements</h5>
+                                <ul>
+                                    <li>Upcoming achievements to be added...</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-
-                    <div class="locations">
-                        <h4><i class="fas fa-map-marker-alt"></i> Search Areas</h4>
-                        <div class="locations-list">
-                            <span class="location-tag"><i class="fas fa-map-pin"></i> Brest</span>
-                            <span class="location-tag"><i class="fas fa-map-pin"></i> Surroundings of Brest</span>
-                            <span class="location-tag"><i class="fas fa-map-pin"></i> Laval</span>
-                        </div>
+                    <div class="internship-footer">
+                        <a href="https://www.pokapok.org/" target="_blank" class="company-link">
+                            <i class="fas fa-external-link-alt"></i> Visit the site
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
     <section id="contact">
         <div class="container">
             <div class="section-title reveal">
