@@ -378,12 +378,11 @@ body.dark-mode .filter-btn.active {
     border-radius: var(--radius);
     box-shadow: var(--shadow-md);
     text-align: center;
-    transition: var(--transition);
+    will-change: transform, box-shadow, border-color; /* Optimisation performance */
     border: 1px solid var(--border-light);
-    /* Pour l'animation de filtrage */
-    opacity: 1;
-    transform: scale(1);
-    transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    /* GSAP gérera les animations */
+    opacity: 0;
+    transform: translateY(20px);
 }
 
 .skill-card.hidden {
@@ -437,10 +436,12 @@ body.dark-mode .filter-btn.active {
     border-radius: var(--radius);
     overflow: hidden;
     box-shadow: var(--shadow-md);
-    transition: var(--transition);
     display: flex;
     flex-direction: column; /* Stack image, content, links */
     border: 1px solid var(--border-light);
+    will-change: transform, box-shadow; /* Optimisation performance */
+    opacity: 0;
+    transform: translateY(20px) rotate(2deg);
 }
 .project-card:hover {
     transform: translateY(-8px);
@@ -825,15 +826,8 @@ body.dark-mode .experience-description .tech-highlight {
 
 
 /* --- Scroll Animations --- */
-.reveal {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s cubic-bezier(0.5, 0, 0, 1), transform 0.8s cubic-bezier(0.5, 0, 0, 1);
-}
-.reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
+/* GSAP will handle these animations via JavaScript */
+.reveal { opacity: 0; }
 
 /* --- Responsive Design --- */
 @media (max-width: 768px) {
