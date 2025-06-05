@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andreoli Enzo - Développeur Créatif & Full Stack</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome (pour les icônes) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- CSS personnalisé -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="#home" class="logo">Enzo Andreoli</a> <!-- Tes initiales ou un petit logo -->
+
+            <!-- Menu pour Desktop -->
+            <ul class="nav-links">
+                <li class="nav-link current"><a href="#home">Accueil</a></li>
+                <li class="nav-link"><a href="#about">À Propos</a></li>
+                <li class="nav-link"><a href="#skills">Compétences</a></li>
+                <li class="nav-link"><a href="#projects">Projets</a></li>
+                <li class="nav-link"><a href="#general-knowledge">Culture Générale</a></li>
+                <li class="nav-link"><a href="#contact">Contact</a></li>
+            </ul>
+
+            <!-- Bouton Burger pour Mobile (à lier avec JS si menu mobile implémenté) -->
+            <button class="menu-toggle" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Section Accueil (Hero) -->
+        <section id="home">
+            <!-- Conteneur pour Three.js -->
+            <div id="three-bg"></div>
+
+            <div class="hero-content container reveal">
+                <h1>Salut, je suis Enzo Andreoli 👋</h1>
+                <p class="subtitle">
+                    Étudiant en <strong>BUT Informatique</strong> à l'IUT de Laval. Passionné par le développement
+                    <span class="tech-highlight">Java, Python, Lua</span>,
+                    et les bases de données <span class="tech-highlight">SQL/NoSQL</span>.
+                    <br>Je transforme les idées en code.
+                </p>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn btn-primary"><i class="fas fa-lightbulb"></i> Découvrir mes projets</a>
+                    <a href="#" onclick="alert('Non disponible pour le moment, je le mets à jour'); return false;" class="btn btn-secondary"><i class="fas fa-file-arrow-down"></i> Télécharger mon CV</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section À Propos -->
+        <section id="about" class="section">
+            <div class="container reveal">
+                <h2 class="section-title">Qui suis-je ?</h2>
+                <div class="about-content">
+                    <img src="./moi.jpg" alt="Moi :p" class="profile-pic" style="object-position: center 25%;"> <!-- REMPLACE PAR TA VRAIE PHOTO -->
+                    <div class="about-text">
+                        <p>
+                            Actuellement en formation <strong>BUT Informatique à l'IUT de Laval</strong>, je suis un développeur curieux et motivé, toujours prêt à relever de nouveaux défis techniques. Mon parcours m'a permis d'acquérir de solides compétences en <strong>Java</strong>, en développement web avec <strong>PHP et Symfony</strong>, et en manipulation de diverses bases de données comme <strong>SQL (PostgreSQL/MySQL), MongoDB, Neo4j et Redis</strong>.
+                        </p>
+                        <p>
+                            J'aime particulièrement le développement backend et la résolution de problèmes complexes. Dans mon temps libre, j'ai découvert le <strong>machine learning et l'apprentissage par renforcement</strong>, domaines qui me passionnent énormément. J'ai notamment créé un bot utilisant l'algorithme <strong>PPO (Proximal Policy Optimization)</strong>, une expérience qui m'a permis d'explorer les mécanismes d'apprentissage automatique et d'approfondir mes compétences en <strong>Python</strong>.
+                        </p>
+                        <p>
+                            J'apprécie le travail en équipe et je suis convaincu que la collaboration est la clé pour créer des solutions exceptionnelles.
+                            Je suis également à l'aise avec les environnements <strong>Linux</strong> et les outils de versioning comme <strong>Git</strong>.
+                        </p>
+                        <p>
+                             Je recherche activement un <strong>stage</strong> ou une <strong>alternance</strong> pour mettre en pratique mes acquis et contribuer à des projets stimulants. N'hésitez pas à me contacter !
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Compétences -->
+        <section id="skills" class="section">
+            <div class="container reveal">
+                <h2 class="section-title">Mes Outils de Prédilection</h2>
+                
+                <!-- Filtres de compétences -->
+                <div class="skills-filter reveal">
+                    <button class="filter-btn active" data-filter="all">Toutes</button>
+                    <button class="filter-btn" data-filter="languages">Langages</button>
+                    <button class="filter-btn" data-filter="frameworks">Frameworks</button>
+                    <button class="filter-btn" data-filter="databases">Bases de données</button>
+                    <button class="filter-btn" data-filter="devops">DevOps</button>
+                    <button class="filter-btn" data-filter="tools">Outils</button>
+                </div>
+                
+                <div class="skills-grid">
+                    <!-- Langages de programmation -->
+                    <div class="skill-card reveal" data-category="languages"> <i class="skill-icon fab fa-java"></i> <h4>Java</h4> </div>
+                    <div class="skill-card reveal" data-category="languages"> <i class="skill-icon fab fa-php"></i> <h4>PHP</h4> </div>
+                    <div class="skill-card reveal" data-category="languages"> <i class="skill-icon fas fa-code"></i> <h4>Lua</h4> </div>
+                    <div class="skill-card reveal" data-category="languages"> <i class="skill-icon fab fa-python"></i> <h4>Python</h4> </div>
+                    <div class="skill-card reveal" data-category="languages"> <i class="skill-icon fab fa-html5"></i> <h4>HTML5</h4> </div>
+                    <div class="skill-card reveal" data-category="languages"> <i class="skill-icon fab fa-css3-alt"></i> <h4>CSS3</h4> </div>
+                    <div class="skill-card reveal" data-category="languages"> <i class="skill-icon fab fa-js-square"></i> <h4>JavaScript</h4> </div>
+                    
+                    <!-- Frameworks -->
+                    <div class="skill-card reveal" data-category="frameworks"> <i class="skill-icon fab fa-symfony"></i> <h4>Symfony</h4> </div>
+                    <div class="skill-card reveal" data-category="frameworks"> <i class="skill-icon fas fa-book"></i> <h4>Doctrine</h4> </div>
+                    
+                    <!-- Bases de données -->
+                    <div class="skill-card reveal" data-category="databases"> <i class="skill-icon fas fa-database"></i> <h4>SQL</h4> </div>
+                    <div class="skill-card reveal" data-category="databases"> <i class="skill-icon fas fa-database"></i> <h4>MySQL</h4> </div>
+                    <div class="skill-card reveal" data-category="databases"> <i class="skill-icon fas fa-database"></i> <h4>MariaDB</h4> </div>
+                    <div class="skill-card reveal" data-category="databases"> <i class="skill-icon fas fa-database"></i> <h4>SQLite</h4> </div>
+                    <div class="skill-card reveal" data-category="databases"> <i class="skill-icon fas fa-database"></i> <h4>SQLServer</h4> </div>
+                    <div class="skill-card reveal" data-category="databases"> <i class="skill-icon fas fa-leaf"></i> <h4>MongoDB</h4> </div>
+                    <div class="skill-card reveal" data-category="databases"> <i class="skill-icon fas fa-server"></i> <h4>Redis</h4> </div>
+                    <div class="skill-card reveal" data-category="databases"> <i class="skill-icon fas fa-project-diagram"></i> <h4>Neo4j</h4> </div>
+                    
+                    <!-- DevOps -->
+                    <div class="skill-card reveal" data-category="devops"> <i class="skill-icon fab fa-git-alt"></i> <h4>Git</h4> </div>
+                    <div class="skill-card reveal" data-category="devops"> <i class="skill-icon fab fa-github"></i> <h4>GitHub</h4> </div>
+                    <div class="skill-card reveal" data-category="devops"> <i class="skill-icon fas fa-code-branch"></i> <h4>GitHub Actions</h4> </div>
+                    <div class="skill-card reveal" data-category="devops"> <i class="skill-icon fab fa-docker"></i> <h4>Docker</h4> </div>
+                    <div class="skill-card reveal" data-category="devops"> <i class="skill-icon fas fa-ship"></i> <h4>Portainer</h4> </div>
+                    <div class="skill-card reveal" data-category="devops"> <i class="skill-icon fas fa-server"></i> <h4>Nginx</h4> </div>
+                    <div class="skill-card reveal" data-category="devops"> <i class="skill-icon fas fa-lock"></i> <h4>Certbot</h4> </div>
+                    <div class="skill-card reveal" data-category="devops"> <i class="skill-icon fab fa-linux"></i> <h4>Linux</h4> </div>
+                    <div class="skill-card reveal" data-category="devops"> <i class="skill-icon fab fa-ubuntu"></i> <h4>Ubuntu</h4> </div>
+                    
+                    <!-- Outils -->
+                    <div class="skill-card reveal" data-category="tools"> <i class="skill-icon fas fa-code"></i> <h4>VSCode</h4> </div>
+                    <div class="skill-card reveal" data-category="tools"> <i class="skill-icon fas fa-code"></i> <h4>Visual Studio</h4> </div>
+                    <div class="skill-card reveal" data-category="tools"> <i class="skill-icon fas fa-laptop-code"></i> <h4>IntelliJ IDEA</h4> </div>
+                    <div class="skill-card reveal" data-category="tools"> <i class="skill-icon fab fa-android"></i> <h4>Android Studio</h4> </div>
+                    <div class="skill-card reveal" data-category="tools"> <i class="skill-icon fab fa-figma"></i> <h4>Figma</h4> </div>
+                    <div class="skill-card reveal" data-category="tools"> <i class="skill-icon fas fa-terminal"></i> <h4>Termius</h4> </div>
+                    <div class="skill-card reveal" data-category="tools"> <i class="skill-icon fab fa-github"></i> <h4>GitHub Copilot</h4> </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Projets -->
+        <section id="projects" class="section">
+            <div class="container reveal">
+            <h2 class="section-title">Quelques Réalisations</h2>
+            <div class="projects-grid">
+
+                <!-- Projet 1 : REMPLACE CONTENU + IMAGE -->
+                <div class="project-card reveal">
+                <div class="project-image" style="background-image: url('./projet1.png')"></div>
+                <div class="project-content">
+                    <h3>Java Robot avec leJOS</h3>
+                    <p>
+                    Programmer un robot pour naviguer sur un parcours en utilisant Java et la bibliothèque leJOS.
+                    </p>
+                    <div class="project-tags">
+                    <span class="project-tag">Java</span>
+                    <span class="project-tag">Robotique</span>
+                    <span class="project-tag">leJOS</span>
+                    <span class="project-tag">Robot LEGO</span>
+                    </div>
+                    <div class="project-links">
+                    <a href="#" onclick="showNotification(); return false;" class="link-github"><i class="fab fa-github"></i> Code</a>
+                    <!-- <a href="#" target="_blank" rel="noopener noreferrer" class="link-live"><i class="fas fa-external-link-alt"></i> Démo</a> -->
+                    </div>
+                </div>
+                </div>
+
+                <!-- Projet 2 : REMPLACE CONTENU + IMAGE -->
+                <div class="project-card reveal">
+                <div class="project-image" style="background-image: url('./projet2.png')"></div>
+                <div class="project-content">
+                    <h3>Site du BDE</h3>
+                    <p>
+                    Création du site web du bureau des étudiants de l’IUT, incluant un système de gestion des événements.
+                    </p>
+                    <div class="project-tags">
+                    <span class="project-tag">PHP</span>
+                    <span class="project-tag">Site Web</span>
+                    </div>
+                     <div class="project-links">
+                    <a href="#" onclick="showNotification(); return false;" class="link-github"><i class="fab fa-github"></i> Code</a>
+                    <a href="#" onclick="showNotification(); return false;" class="link-live"><i class="fas fa-external-link-alt"></i> Démo</a>
+                    </div>
+                </div>
+                </div>
+
+                 <!-- Projet 3 : REMPLACE CONTENU + IMAGE -->
+                <div class="project-card reveal">
+                <div class="project-image" style="background-image: url('./projet3.png')"></div>
+                <div class="project-content">
+                    <h3>Système d'équipage</h3>
+                    <p>
+                    Développement d’un système d’équipage en Lua pour un serveur de jeu, permettant la gestion des groupes et des permissions.
+                    </p>
+                    <div class="project-tags">
+                    <span class="project-tag">Lua</span>
+                    <span class="project-tag">Garry's Mod</span>
+                    <span class="project-tag">Serveur</span>
+                    <span class="project-tag">Système</span>
+                    </div>
+                     <div class="project-links">
+                    <a href="#" onclick="showNotification(); return false;" class="link-github"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </div>
+                </div>
+
+                <!-- Ajoute d'autres projets ici -->
+
+            </div>
+            </div>
+        </section>
+        <div id="notification" style="
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            z-index: 1000;
+            display: none;
+        ">Ce projet n'est pas disponible pour le moment.</div>
+
+        <script>
+            function showNotification() {
+            window.showNotification();
+            }
+        </script>
+
+        <!-- Section Culture Générale -->
+        <section id="general-knowledge" class="section">
+            <div class="container reveal">
+                <h2 class="section-title">Culture Générale</h2>
+                <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">
+                    Au-delà du code, je m'intéresse à divers domaines qui enrichissent ma vision du monde et de la technologie.
+                </p>
+
+                <div class="knowledge-categories">
+                    <!-- Intelligence Artificielle -->
+                    <div class="knowledge-category reveal">
+                        <div class="knowledge-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>Intelligence Artificielle</h3>
+                        <p>Passionné par l'IA et le machine learning, j'ai développé un bot pour Rocket League utilisant PyTorch et l'algorithme PPO (Proximal Policy Optimization). Ce projet m'a permis de mettre en pratique les concepts d'apprentissage par renforcement en entraînant une IA à jouer au football avec des voitures dans un environnement 3D complexe et dynamique.</p>
+                    </div>
+
+                    <!-- Océanographie -->
+                    <div class="knowledge-category reveal">
+                        <div class="knowledge-icon">
+                            <i class="fas fa-water"></i>
+                        </div>
+                        <h3>Océanographie</h3>
+                        <p>Lors de mon stage chez Pokapok, j'ai découvert le monde fascinant des flotteurs océanographiques. Ces instruments permettent de collecter des données essentielles sur les océans comme la température, la salinité et les courants marins. J'ai aussi compris l'importance cruciale de ces données pour l'étude du phytoplancton et des écosystèmes marins, un univers que je ne connaissais pas auparavant.</p>
+                    </div>
+
+                    <!-- Littérature Technique -->
+                    <div class="knowledge-category reveal">
+                        <div class="knowledge-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h3>Littérature Technique</h3>
+                        <p>Curieux des nouvelles technologies, de l'IA et de la programmation. Dans mon temps libre, j'ai lu en partie "Reinforcement Learning: An Introduction" (second edition) de Richard S. Sutton et Andrew G. Barto. J'ai trouvé cela très intéressant même si j'étais un peu perdu sur le plan mathématique 😅.</p>
+                    </div>
+                </div>
+
+                <div class="professional-experience reveal">
+                    <h3 class="experience-title">Mon Stage chez Pokapok</h3>
+                    <div class="experience-content">
+                        <div class="experience-image">
+                            <img src="./logo_826x800_72dpi.png" alt="Logo Pokapok" class="company-logo">
+                            <!-- Fallback if image not available -->
+                            <i class="fas fa-code-branch fa-4x" style="display: none;"></i>
+                        </div>
+                        <div class="experience-description">
+                            <p>Mon stage chez Pokapok m'a ouvert les portes du monde professionnel de la tech au service de la recherche scientifique. J'ai découvert le framework <span class="tech-highlight">VueJS</span> que j'ai rapidement adopté pour développer des interfaces dynamiques et réactives.</p>
+                            <p>Cette immersion dans le milieu scientifique m'a confronté à un vocabulaire technique spécialisé : flotteurs océanographiques, ETL (Extract, Transform, Load), métadonnées, API, traitement de données spatio-temporelles... Un véritable défi qui m'a permis d'enrichir considérablement ma culture technique.</p>
+                            <p>J'ai particulièrement apprécié l'environnement de travail collaboratif, avec des réunions quotidiennes (daily scrums) et l'utilisation d'outils professionnels comme Git et Docker dans un contexte réel. Cette expérience m'a donné un aperçu fascinant de comment la technologie peut servir la recherche scientifique et environnementale.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fun-facts-container reveal">
+                    <h3 class="fun-facts-title">Le saviez-vous ?</h3>
+                    <div class="fun-facts">
+                        <div class="fun-fact">
+                            <i class="fas fa-lightbulb"></i>
+                            <p>Le projet Argo déploie plus de 3800 flotteurs autonomes dans les océans du monde, mesurant la température et la salinité jusqu'à 2000 mètres de profondeur.</p>
+                        </div>
+                        <div class="fun-fact">
+                            <i class="fas fa-code"></i>
+                            <p>Le terme "deep learning" a été introduit dans le contexte de l'IA en 2000, mais cette approche n'a vraiment pris son essor qu'après 2010 avec l'augmentation de la puissance de calcul.</p>
+                        </div>
+                        <div class="fun-fact">
+                            <i class="fas fa-robot"></i>
+                            <p>L'apprentissage par renforcement, que j'ai utilisé dans mes projets, est la même technique qui a permis à l'IA AlphaGo de battre le champion du monde du jeu de Go en 2016.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Contact -->
+        <section id="contact" class="section">
+            <div class="container reveal">
+                <h2 class="section-title">Entrons en contact !</h2>
+                <p style="text-align: center; max-width: 600px; margin: -2rem auto 3rem auto;">
+                    Intéressé(e) par mon profil ? Une question ? Une opportunité de stage ou d'alternance ? <br>Je serais ravi d'échanger avec vous.
+                </p>
+                <div class="contact-info">
+                    <div class="contact-item reveal">
+                        <a href="mailto:andreolienzo@gmail.com">
+                            <i class="contact-icon fas fa-envelope"></i>
+                            <span>Email</span>
+                        </a>
+                    </div>
+                    <div class="contact-item reveal">
+                        <a href="https://www.linkedin.com/in/enzo-andreoli-0ba11890/" target="_blank" rel="noopener noreferrer">
+                            <i class="contact-icon fab fa-linkedin"></i>
+                             <span>LinkedIn</span>
+                        </a>
+                    </div>
+                    <div class="contact-item reveal">
+                        <a href="https://github.com/Yoshi-OOF" target="_blank" rel="noopener noreferrer">
+                             <i class="contact-icon fab fa-github"></i>
+                             <span>GitHub</span>
+                        </a>
+                    </div>
+                     <!-- Optionnel: Téléphone -->
+                     <!-- <div class="contact-item reveal">
+                         <a href="tel:+33XXXXXXXXX">
+                              <i class="contact-icon fas fa-phone"></i>
+                              <span>Téléphone</span>
+                         </a>
+                     </div> -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> Andreoli Enzo - Tous droits réservés.</p>
+             <p style="font-size: 0.8rem; margin-top: 0.5rem;">Construit avec <i class="fas fa-heart" style="color: var(--accent-color);"></i> et un peu de Three.js</p>
+        </div>
+    </footer>
+
+    <!-- Bouton Dark Mode -->
+    <button class="theme-toggle" id="theme-toggle" aria-label="Changer de thème">
+        <i class="fas fa-sun"></i>
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Scripts -->
+    <!-- Charger Three.js directement depuis un CDN -->
+    <script src="https://unpkg.com/three@0.157.0/build/three.min.js"></script>
+    
+    <!-- Scripts personnalisés -->
+    <script src="./js/main.js"></script>
+    <script src="./js/three-background.js"></script>
+</body>
+</html>
