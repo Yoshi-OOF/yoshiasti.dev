@@ -5,24 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Andreoli Enzo - Développeur Créatif & Full Stack</title>
 
-    <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome (pour les icônes) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- CSS personnalisé -->
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <!-- Header -->
     <header class="header">
         <nav class="nav container">
-            <a href="#home" class="logo">Enzo Andreoli</a> <!-- Tes initiales ou un petit logo -->
+            <a href="#home" class="logo">Enzo Andreoli</a>
 
-            <!-- Menu pour Desktop -->
             <ul class="nav-links">
                 <li class="nav-link current"><a href="#home">Accueil</a></li>
                 <li class="nav-link"><a href="#about">À Propos</a></li>
@@ -32,7 +27,6 @@
                 <li class="nav-link"><a href="#contact">Contact</a></li>
             </ul>
 
-            <!-- Bouton Burger pour Mobile (à lier avec JS si menu mobile implémenté) -->
             <button class="menu-toggle" aria-label="Menu">
                 <i class="fas fa-bars"></i>
             </button>
@@ -40,9 +34,7 @@
     </header>
 
     <main>
-        <!-- Section Accueil (Hero) -->
         <section id="home">
-            <!-- Conteneur pour Three.js -->
             <div id="three-bg"></div>
 
             <div class="hero-content container reveal">
@@ -60,12 +52,11 @@
             </div>
         </section>
 
-        <!-- Section À Propos -->
         <section id="about" class="section">
             <div class="container reveal">
                 <h2 class="section-title">Qui suis-je ?</h2>
                 <div class="about-content">
-                    <img src="./moi.jpg" alt="Photo de moi" class="profile-pic" style="object-position: center 25%;"> <!-- REMPLACE PAR TA VRAIE PHOTO -->
+                    <img src="./moi.jpg" alt="Photo de moi" class="profile-pic" style="object-position: center 25%;">
                     <div class="about-text">
                         <p>
                             Actuellement en formation <strong>BUT Informatique à l'IUT de Laval</strong>, je suis un développeur curieux et motivé, toujours prêt à relever de nouveaux défis techniques. Mon parcours m'a permis d'acquérir de solides compétences en <strong>Java</strong>, en développement web avec <strong>PHP et Symfony</strong>, et en manipulation de diverses bases de données comme <strong>SQL (PostgreSQL/MySQL), MongoDB, Neo4j et Redis</strong>.
@@ -85,12 +76,10 @@
             </div>
         </section>
 
-        <!-- Section Compétences -->
         <section id="skills" class="section">
             <div class="container reveal">
                 <h2 class="section-title">Mes Outils de Prédilection</h2>
                 
-                <!-- Filtres de compétences -->
                 <div class="skills-filter reveal">
                     <button class="filter-btn active" data-filter="all">Toutes</button>
                     <button class="filter-btn" data-filter="languages">Langages</button>
@@ -101,7 +90,6 @@
                 </div>
                 
                 <div class="skills-grid">
-                    <!-- Langages de programmation -->
                     <div class="skill-card reveal" data-category="languages"> <i class="skill-icon fab fa-java"></i> <h4>Java</h4> </div>
                     <div class="skill-card reveal" data-category="languages"> <i class="skill-icon fab fa-php"></i> <h4>PHP</h4> </div>
                     <div class="skill-card reveal" data-category="languages"> <i class="skill-icon fas fa-code"></i> <h4>Lua</h4> </div>
@@ -110,11 +98,9 @@
                     <div class="skill-card reveal" data-category="languages"> <i class="skill-icon fab fa-css3-alt"></i> <h4>CSS3</h4> </div>
                     <div class="skill-card reveal" data-category="languages"> <i class="skill-icon fab fa-js-square"></i> <h4>JavaScript</h4> </div>
                     
-                    <!-- Frameworks -->
                     <div class="skill-card reveal" data-category="frameworks"> <i class="skill-icon fab fa-symfony"></i> <h4>Symfony</h4> </div>
                     <div class="skill-card reveal" data-category="frameworks"> <i class="skill-icon fas fa-book"></i> <h4>Doctrine</h4> </div>
                     
-                    <!-- Bases de données -->
                     <div class="skill-card reveal" data-category="databases"> <i class="skill-icon fas fa-database"></i> <h4>SQL</h4> </div>
                     <div class="skill-card reveal" data-category="databases"> <i class="skill-icon fas fa-database"></i> <h4>MySQL</h4> </div>
                     <div class="skill-card reveal" data-category="databases"> <i class="skill-icon fas fa-database"></i> <h4>MariaDB</h4> </div>
@@ -124,7 +110,6 @@
                     <div class="skill-card reveal" data-category="databases"> <i class="skill-icon fas fa-server"></i> <h4>Redis</h4> </div>
                     <div class="skill-card reveal" data-category="databases"> <i class="skill-icon fas fa-project-diagram"></i> <h4>Neo4j</h4> </div>
                     
-                    <!-- DevOps -->
                     <div class="skill-card reveal" data-category="devops"> <i class="skill-icon fab fa-git-alt"></i> <h4>Git</h4> </div>
                     <div class="skill-card reveal" data-category="devops"> <i class="skill-icon fab fa-github"></i> <h4>GitHub</h4> </div>
                     <div class="skill-card reveal" data-category="devops"> <i class="skill-icon fas fa-code-branch"></i> <h4>GitHub Actions</h4> </div>
@@ -135,7 +120,6 @@
                     <div class="skill-card reveal" data-category="devops"> <i class="skill-icon fab fa-linux"></i> <h4>Linux</h4> </div>
                     <div class="skill-card reveal" data-category="devops"> <i class="skill-icon fab fa-ubuntu"></i> <h4>Ubuntu</h4> </div>
                     
-                    <!-- Outils -->
                     <div class="skill-card reveal" data-category="tools"> <i class="skill-icon fas fa-code"></i> <h4>VSCode</h4> </div>
                     <div class="skill-card reveal" data-category="tools"> <i class="skill-icon fas fa-code"></i> <h4>Visual Studio</h4> </div>
                     <div class="skill-card reveal" data-category="tools"> <i class="skill-icon fas fa-laptop-code"></i> <h4>IntelliJ IDEA</h4> </div>
@@ -147,13 +131,11 @@
             </div>
         </section>
 
-        <!-- Section Projets -->
         <section id="projects" class="section">
             <div class="container reveal">
             <h2 class="section-title">Quelques Réalisations</h2>
             <div class="projects-grid">
 
-                <!-- Projet 1 : REMPLACE CONTENU + IMAGE -->
                 <div class="project-card reveal">
                 <div class="project-image" style="background-image: url('./projet1.png')"></div>
                 <div class="project-content">
@@ -169,18 +151,16 @@
                     </div>
                     <div class="project-links">
                     <a href="#" onclick="showNotification(); return false;" class="link-github"><i class="fab fa-github"></i> Code</a>
-                    <!-- <a href="#" target="_blank" rel="noopener noreferrer" class="link-live"><i class="fas fa-external-link-alt"></i> Démo</a> -->
                     </div>
                 </div>
                 </div>
 
-                <!-- Projet 2 : REMPLACE CONTENU + IMAGE -->
                 <div class="project-card reveal">
                 <div class="project-image" style="background-image: url('./projet2.png')"></div>
                 <div class="project-content">
                     <h3>Site du BDE</h3>
                     <p>
-                    Création du site web du bureau des étudiants de l’IUT, incluant un système de gestion des événements.
+                    Création du site web du bureau des étudiants de l'IUT, incluant un système de gestion des événements.
                     </p>
                     <div class="project-tags">
                     <span class="project-tag">PHP</span>
@@ -193,13 +173,12 @@
                 </div>
                 </div>
 
-                 <!-- Projet 3 : REMPLACE CONTENU + IMAGE -->
                 <div class="project-card reveal">
                 <div class="project-image" style="background-image: url('./projet3.png')"></div>
                 <div class="project-content">
                     <h3>Système d'équipage</h3>
                     <p>
-                    Développement d’un système d’équipage en Lua pour un serveur de jeu, permettant la gestion des groupes et des permissions.
+                    Développement d'un système d'équipage en Lua pour un serveur de jeu, permettant la gestion des groupes et des permissions.
                     </p>
                     <div class="project-tags">
                     <span class="project-tag">Lua</span>
@@ -212,8 +191,6 @@
                     </div>
                 </div>
                 </div>
-
-                <!-- Ajoute d'autres projets ici -->
 
             </div>
             </div>
@@ -237,7 +214,6 @@
             }
         </script>
 
-        <!-- Section Culture Générale -->
         <section id="general-knowledge" class="section">
             <div class="container reveal">
                 <h2 class="section-title">Culture Générale</h2>
@@ -246,7 +222,6 @@
                 </p>
 
                 <div class="knowledge-categories">
-                    <!-- Intelligence Artificielle -->
                     <div class="knowledge-category reveal">
                         <div class="knowledge-icon">
                             <i class="fas fa-brain"></i>
@@ -255,7 +230,6 @@
                         <p>Passionné par l'IA et le machine learning, j'ai développé un bot pour Rocket League utilisant PyTorch et l'algorithme PPO (Proximal Policy Optimization). Ce projet m'a permis de mettre en pratique les concepts d'apprentissage par renforcement en entraînant une IA à jouer au football avec des voitures dans un environnement 3D complexe et dynamique.</p>
                     </div>
 
-                    <!-- Océanographie -->
                     <div class="knowledge-category reveal">
                         <div class="knowledge-icon">
                             <i class="fas fa-water"></i>
@@ -264,7 +238,6 @@
                         <p>Lors de mon stage chez Pokapok, j'ai découvert le monde fascinant des flotteurs océanographiques. Ces instruments permettent de collecter des données essentielles sur les océans comme la température, la salinité et les courants marins. J'ai aussi compris l'importance cruciale de ces données pour l'étude du phytoplancton et des écosystèmes marins, un univers que je ne connaissais pas auparavant.</p>
                     </div>
 
-                    <!-- Littérature Technique -->
                     <div class="knowledge-category reveal">
                         <div class="knowledge-icon">
                             <i class="fas fa-book"></i>
@@ -279,7 +252,6 @@
                     <div class="experience-content">
                         <div class="experience-image">
                             <img src="./logo_826x800_72dpi.png" alt="Logo Pokapok" class="company-logo">
-                            <!-- Fallback if image not available -->
                             <i class="fas fa-code-branch fa-4x" style="display: none;"></i>
                         </div>
                         <div class="experience-description">
@@ -310,7 +282,6 @@
             </div>
         </section>
 
-        <!-- Section Contact -->
         <section id="contact" class="section">
             <div class="container reveal">
                 <h2 class="section-title">Entrons en contact !</h2>
@@ -336,19 +307,11 @@
                              <span>GitHub</span>
                         </a>
                     </div>
-                     <!-- Optionnel: Téléphone -->
-                     <!-- <div class="contact-item reveal">
-                         <a href="tel:+33XXXXXXXXX">
-                              <i class="contact-icon fas fa-phone"></i>
-                              <span>Téléphone</span>
-                         </a>
-                     </div> -->
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <p>&copy; <span id="year"></span> Andreoli Enzo - Tous droits réservés.</p>
@@ -356,21 +319,16 @@
         </div>
     </footer>
 
-    <!-- Bouton Dark Mode -->
     <button class="theme-toggle" id="theme-toggle" aria-label="Changer de thème">
         <i class="fas fa-sun"></i>
         <i class="fas fa-moon"></i>
     </button>
 
-    <!-- Scripts -->
-    <!-- GSAP Animation Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
     
-    <!-- Charger Three.js directement depuis un CDN -->
     <script src="https://unpkg.com/three@0.157.0/build/three.min.js"></script>
     
-    <!-- Scripts personnalisés -->
     <script src="./js/main.js"></script>
     <script src="./js/three-background.js"></script>
     <script src="./js/animations.js"></script>
